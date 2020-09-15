@@ -19,4 +19,9 @@ Window {
         // leading to infinite object instances.
         text: BindableHelper.bind(1).value
     }
+
+    Component.onCompleted: {
+        console.log( BindableHelper.bind(42) )
+        console.log( BindableHelper.bind(42).value )
+    }
 }
